@@ -1,6 +1,7 @@
 {
   "name": "python-project",
   "version": "0.0.0-development",
+  "private": true,
   "devDependencies": {
     "@semantic-release/git": "^10.0.1",
     "@semantic-release/github": "^9.2.3",
@@ -10,6 +11,13 @@
     "semantic-release": "semantic-release"
   },
   "release": {
-    "branches": ["main"]
+    "branches": ["main"],
+    "plugins": [
+      "@semantic-release/commit-analyzer",
+      "@semantic-release/release-notes-generator",
+      ["@semantic-release/github", {
+        "assets": []
+      }]
+    ]
   }
 }
