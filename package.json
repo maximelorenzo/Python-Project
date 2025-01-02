@@ -1,0 +1,25 @@
+{
+  "name": "python-project",
+  "version": "0.0.0-development",
+  "description": "M2 203 python project",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs",
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "semantic-release": "semantic-release"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@semantic-release/git": "^10.0.1",
+    "@semantic-release/github": "^9.2.3",
+    "semantic-release": "^22.0.8"
+  },
+  "release": {
+    "branches": ["main"]
+  }
+}
