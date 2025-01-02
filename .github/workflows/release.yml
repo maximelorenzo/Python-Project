@@ -26,5 +26,5 @@ jobs:
       - name: Run Semantic Release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Automatically provided by GitHub
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}  # You must set this secret in your GitHub repository
+          NPM_TOKEN: ${{ GH_TOKEN }}  # You must set this secret in your GitHub repository
         run: npm run release
