@@ -1,0 +1,30 @@
+
+
+me: Release
+
+on:
+  push:
+    branches:
+      - main  # Run the workflow when changes are pushed to the main branch
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'  # Specify the Node.js version compatible with Semantic Release
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Run Semantic Release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Automatically provided by GitHub
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}  # You must set this secret in your GitHub repository
+        run: npm run release
