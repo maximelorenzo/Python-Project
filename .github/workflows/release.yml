@@ -5,7 +5,7 @@ name: Release
 on:
   push:
     branches:
-      - main  # Run the workflow when changes are pushed to the main branch
+      - main  # 
 
 jobs:
   release:
@@ -18,13 +18,13 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '18'  # Specify the Node.js version compatible with Semantic Release
+          node-version: '18'
 
       - name: Install dependencies
         run: npm install
 
       - name: Run Semantic Release
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Automatically provided by GitHub
-          NPM_TOKEN: ${{ GH_TOKEN }}  # You must set this secret in your GitHub repository
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} 
+          NPM_TOKEN: ${{ secrets.GH_TOKEN }} 
         run: npm run release
