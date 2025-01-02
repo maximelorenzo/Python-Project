@@ -1,1 +1,1 @@
-print("semantic release test")
+print("semantic release test 2")
