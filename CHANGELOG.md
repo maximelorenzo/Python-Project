@@ -1,3 +1,15 @@
+# [2.0.0](https://github.com/maximelorenzo/Python-Project/compare/v1.3.0...v2.0.0) (2025-01-03)
+
+
+### Features
+
+* pybacktestchain is imported into the project ([f18b106](https://github.com/maximelorenzo/Python-Project/commit/f18b106fbbca088b20ca51a48d334762a9cb697e))
+
+
+### BREAKING CHANGES
+
+* new version, set up complete, can start working on the project (finally).
+
 # [1.3.0](https://github.com/maximelorenzo/Python-Project/compare/v1.2.0...v1.3.0) (2025-01-03)
 
 
